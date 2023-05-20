@@ -2,6 +2,11 @@
    height:calc(100vh - 80px);
    width: 100vw;
    position:relative;
+   overflow: hidden;
+
+   @media screen and (max-width:1200px){
+      height:calc(60vh - 80px);
+   }
 
 
    .container{
@@ -24,7 +29,7 @@
       position:absolute;
       left: 0;
       right:0;
-      bottom: 100px;
+      bottom: 80px;
       gap:10px;
       margin:auto;
 

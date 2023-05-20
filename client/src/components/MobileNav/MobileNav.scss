@@ -1,0 +1,93 @@
+.mobilenav{
+   height:calc(100vh - 80px);
+   width:100vw;
+   background-color: #313236;
+   overflow: hidden;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   margin:0;
+   padding:0;
+   z-index: 5;
+   position:relative;
+   .wrapper{
+      display: flex;
+      flex-direction: column;
+      width: 40;
+      padding-top:2rem;
+
+      .top{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 3rem;
+         color: white;
+         margin:2rem;
+
+         @media screen and (max-width:480px){
+            font-size: 2rem;
+         }
+      }
+      .center{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap:1rem;
+         color:white;
+         margin-bottom: 2rem;
+         .item{
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+         }
+
+      }
+
+      .bottom{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         gap:1rem;
+         .item{
+            border-top:1px solid white;
+            display: flex;
+            width:100%;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color:white;
+         }
+         .icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top:1px solid white;
+            width:100%;
+            gap:15px;
+            color: #777;
+            cursor:pointer;
+            padding-top:1rem;
+
+            .cartIcon{
+               position:relative;
+               span{
+                  font-size:12px;
+                  width:20px;
+                  height: 20px;
+                  border-radius: 50%;
+                  background-color: #2879fe;
+                  color:white;
+                  position:absolute;
+                  right:-10px;
+                  top:-10px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+               }
+            }
+         }
+      }
+   }
+}

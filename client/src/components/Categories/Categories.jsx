@@ -28,7 +28,7 @@ const Categories = () => {
          </div>
          <div className="col col-lg">
             <div className="row">
-               <div className="col">
+               <div className=" small-col col">
                   <div className="row">
                      <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=398&q=80" alt="" />
                      <button>
@@ -37,7 +37,7 @@ const Categories = () => {
 
                   </div>
                </div>
-               <div className="col">
+               <div className="col small-col">
                   <div className="row">
                   <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=398&q=80" alt="" />
                      <button>

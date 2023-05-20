@@ -1,24 +1,35 @@
 .categories{
    display: flex;
    height: 80vh;
-   gap:10px;
-   margin: 10px;
+   gap:1rem;
+   margin: 1rem 2rem;
+
+   @media screen and (max-width:900px) {
+      height:auto;
+      flex-direction: column;
+   }
 
    .col{
       flex:1;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 1rem;
    }
    .col-l{
       flex:2;
-      gap:10px;
+      gap:1rem;
+   }
+
+   .small-col{
+      @media screen and (max-width: 900px) {
+         flex-direction: column!important;
+      }
    }
 
    .row{
       flex:1;
       display: flex;
-      gap: 10px;
+      gap: 1rem;
       position:relative;
       overflow: hidden;
 
@@ -26,8 +37,8 @@
          position:absolute;
          min-width: 100px;
          width:fit-content;
-         height:50px;
-         padding:10px;
+         height:2.5rem;
+         padding:.8rem;
          top: 0;
          bottom:0;
          left:0;
@@ -45,6 +56,12 @@
          width: 100%;
          height: 100%;
          object-fit: cover;
+
+         @media screen and (max-width:900px) {
+            height:30rem;
+            object-position: 50% 30%;
+
+         }
       }
    }
 }

@@ -5,6 +5,10 @@
       display: flex;
       gap:50px;
 
+      @media screen and (max-width:900px){
+         flex-direction: column;
+      }
+
       .item{
          flex:1;
          display: flex;
@@ -29,10 +33,16 @@
       align-items: center;
       justify-content: space-between;
       margin-top: 50px;
+      @media screen and (max-width:900px){
+         flex-direction: column;
+      }
 
       .left{
          display: flex;
          align-items: center;
+         @media screen and (max-width:460px){
+            flex-direction: column;
+         }
 
          .logo{
             color:#2879fe;
@@ -51,6 +61,10 @@
 
          img{
             height:50px;
+            @media screen and (max-width:460px){
+               height: 100%;
+               width:100%;
+            }
          }
 
       }
