@@ -1,5 +1,8 @@
 .footer{
    margin:100px 200px 20px 200px;
+   @media screen and (max-width:900px){
+      margin:0 0rem;
+   }
 
    .top{
       display: flex;
@@ -27,7 +30,51 @@
             color:gray;
          }
       }
+      .link-item{
+         @media screen and (max-width:900px){
+            display: flex;
+            flex-direction: column;
+         }
+         flex:1;
+         display: flex;
+         flex-direction: column;
+         gap:10px;
+         text-align: justify;
+         font-size: 14px;
+
+         h1{
+            font-size: 18px;
+            font-weight: 500;
+            color:#555;
+         }
+
+         .links{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap:8px;
+            @media screen and (max-width:900px){
+               display: flex;
+               flex-direction: row;
+               align-items: center;
+               gap:2rem;
+            }
+            @media screen and (max-width:485px){
+               display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               gap:.5rem;
+            }
+
+            span{
+               color:gray;
+            }
+
+         }
+      }
    }
+   }
+   
    .bottom{
       display:flex;
       align-items: center;
@@ -70,7 +117,7 @@
       }
 
    }
-}
+
 
 @media screen and (max-width:1500px) {
    .footer{

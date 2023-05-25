@@ -10,10 +10,16 @@ import {
 import Home from './pages/Home/Home';
 import Products from './pages/Products/Products';
 import Product from './pages/Product/Product';
+import About from './pages/About/About';
+import ContactPage from './pages/ContactPage/ContactPage';
+
 
 //Import Footer and Navbar Components
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+
+
+
 
 const Layout = () => {
   return (
@@ -33,6 +39,14 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home/>
+      },
+      {
+        path: '/about',
+        element: <About/>
+      },
+      {
+        path: '/contact',
+        element: <ContactPage/>
       },
       {
         path: '/products/:id',

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './MobileNav.scss'
 import { Link } from 'react-router-dom';
 
@@ -10,8 +10,13 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCartOutlined';
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import CloseIcon from '@mui/icons-material/Close';
+import Cart from '../Cart/Cart';
+
+
 
 const MobileNav = (props) => {
+
+   const [openCart, setOpenCart] = useState(false);
 
    useEffect(() => {
       let url = window.location.href.split("/");
@@ -21,7 +26,6 @@ const MobileNav = (props) => {
    }, []);
    return (
       <div className='mobilenav'>
-
          <div className="wrapper">
                <div className="top">
                   <Link onClick={props.setClose} className="link" to='/'>Wolf Wears Sheep</Link>
@@ -63,11 +67,12 @@ const MobileNav = (props) => {
                      <PersonOutlineIcon />
                      <FavoriteBorderIcon />
                      <div className="cartIcon">
-                        <ShoppingCartIcon />
+                        <ShoppingCartIcon onClick={()=>setOpenCart(!openCart)} />
                         <span>0</span>
                      </div>
                   </div>
                </div>
+               {openCart && <Cart/>}
             </div>
          </div>
    )

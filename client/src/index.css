@@ -5,9 +5,10 @@ body {
    overflow-x: hidden;
 
 }
-
-.no-scroll{
-  overflow-y: hidden;
+@media screen and (max-width: 1200px){
+  .no-scroll{
+    overflow-y: hidden;
+  }
 }
 
 /* Customize scrollbar */

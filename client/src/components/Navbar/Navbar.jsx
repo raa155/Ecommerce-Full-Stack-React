@@ -11,11 +11,13 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutlineOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCartOutlined';
 import TableRowsIcon from '@mui/icons-material/TableRows';
+import Cart from '../Cart/Cart';
 
 
 const Navbar = () => {
   const isMobileResolution = useMatchMedia('(max-width:1200px)', true)
   const [open, setOpen] = useState(false);
+  const [openCart, setOpenCart] = useState(false);
 
   useEffect(() => {
     let url = window.location.href.split("/");
@@ -64,10 +66,10 @@ const Navbar = () => {
               <Link className="link" to='/'>Homepage</Link>
             </div>
             <div className="item">
-              <Link className="link" to='/'>About</Link>
+              <Link className="link" to='/about'>About</Link>
             </div>
             <div className="item">
-              <Link className="link" to='/'>Contact</Link>
+              <Link className="link" to='/contact'>Contact</Link>
             </div>
             <div className="item">
               <Link className="link" to='/'>Stores</Link>
@@ -76,7 +78,7 @@ const Navbar = () => {
               <SearchIcon />
               <PersonOutlineIcon />
               <FavoriteBorderIcon />
-              <div className="cartIcon">
+              <div className="cartIcon" onClick={()=>setOpenCart(!openCart)}>
                 <ShoppingCartIcon />
                 <span>0</span>
               </div>
@@ -92,6 +94,7 @@ const Navbar = () => {
           <MobileNav setClose={closeHandler} />
         )}
       </div>
+      {openCart && <Cart/>}
     </>
   )
 }

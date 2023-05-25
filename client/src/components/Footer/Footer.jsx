@@ -4,21 +4,25 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className="top">
-        <div className="item">
+        <div className="link-item">
           <h1>Categories</h1>
-          <span>Women</span>
-          <span>Men</span>
-          <span>Shoes</span>
-          <span>Accessories</span>
-          <span>New Arrivals</span>
+          <div className="links">
+            <span>Women</span>
+            <span>Men</span>
+            <span>Shoes</span>
+            <span>Accessories</span>
+            <span>New Arrivals</span>
+          </div>
         </div>
-        <div className="item">
+        <div className="link-item">
           <h1>Links</h1>
-          <span>FAQ</span>
-          <span>Pages</span>
-          <span>Stores</span>
-          <span>Compare</span>
-          <span>Cookies</span>
+          <div className="links">
+            <span>FAQ</span>
+            <span>Pages</span>
+            <span>Stores</span>
+            <span>Compare</span>
+            <span>Cookies</span>
+          </div>
         </div>
         <div className="item">
           <h1>About</h1>
